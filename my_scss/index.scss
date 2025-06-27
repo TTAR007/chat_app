@@ -1,0 +1,17 @@
+// variables, functions
+@use 'utils/functions';
+@use 'utils/variables';
+
+// reset
+@use 'base/reset';
+
+// components
+@use 'components/phone';
+@use 'components/text';
+@use 'components/background';
+
+// attribution
+@use 'components/attribution';
+
+// media
+@use 'media/media.scss'

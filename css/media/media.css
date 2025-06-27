@@ -1,0 +1,30 @@
+@media (min-width: 62.5rem) {
+  .wrap {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 7.8125rem;
+  }
+  .wrap .phone_box {
+    justify-self: end;
+  }
+  .main-text_box h1,
+  .main-text_box p {
+    margin: 0;
+    text-align: start;
+  }
+  .main-text_box h1 {
+    margin-block-end: 1.5rem;
+  }
+  .main-text_box p {
+    width: 75%;
+  }
+  .background-illustration-top {
+    border-bottom-left-radius: 255px;
+    width: 470px;
+    bottom: 15%;
+  }
+  .background-illustration-bottom {
+    width: 250px;
+    top: 20%;
+  }
+}

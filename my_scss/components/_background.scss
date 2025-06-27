@@ -1,0 +1,26 @@
+@use '../utils/functions' as *;
+@use '../utils/variables' as *;
+
+.background-illustration-top,
+.background-illustration-bottom {
+    position: absolute;
+    z-index: -1;
+    width: 188px;
+    background-image:
+    linear-gradient(to bottom left, $Light-Magenta-gradient, $Light-Violet-gradient);
+}
+
+.background-illustration-top {
+    top: 0;
+    left: 0;
+    bottom: 45%;
+    border-bottom-right-radius: 255px;
+}
+
+.background-illustration-bottom {
+    opacity: 0.03;
+    top: 45%;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 255px;
+}

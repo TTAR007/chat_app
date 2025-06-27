@@ -1,0 +1,41 @@
+@use '../utils/functions' as *;
+@use '../utils/variables' as *;
+
+@media (min-width: rem(1000)) {
+    .wrap {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: rem(125);
+
+        .phone_box {
+            justify-self: end;
+        }
+    }
+
+    .main-text_box {
+        h1,
+        p {
+            margin: 0;
+            text-align: start;
+        }
+
+        h1 {
+            margin-block-end: rem(24);
+        }
+
+        p {
+            width: 75%;
+        }
+    }
+
+    .background-illustration-top {
+        border-bottom-left-radius: 255px;
+        width: 470px;
+        bottom: 15%;
+    }
+
+    .background-illustration-bottom {
+        width: 250px;
+        top: 20%;
+    }
+}

@@ -1,0 +1,290 @@
+@use '../utils/functions' as *;
+@use '../utils/variables' as *;
+
+.phone_box {
+    background-color: $white;
+    border-radius: 30px;
+    width: 247px;
+    height: 505px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.15);
+}
+
+.white_bar {
+    position: absolute;
+    top: 0;
+    height: 29px;
+    width: 129px;
+    border-radius: 0 0 14px 14px;
+    background-color: white;
+}
+
+.inner-screen_box {
+    background-color: $app-background;
+    padding: 1px;
+    border-radius: 20px;
+    width: 228px;
+    height: 483px;
+}
+
+.chat_header_box {
+    background-image:
+    linear-gradient(to bottom left, $Light-Magenta-gradient, $Light-Violet-gradient);
+    width: 100%;
+    height: 66px;
+    border-radius: 20px 20px 6px 6px;
+    padding-block-start: 30px;
+
+    .header-info_box {
+        width: 196px;
+        height: 24px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .front_section {
+        display: flex;
+        height: 100%;
+        width: fit-content;
+        align-items: center;
+    }
+
+    .left-arrow_box {
+        width: 10px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-inline-end: 6px;
+
+        .left-arrow_container {
+            transform: translateY(1px) rotate(35deg);
+
+            div {
+                width: 2px;
+                height: 7px;
+                border-radius: 2px;
+                background-color: $white;
+                transform-origin: center top;
+            }
+
+            div:nth-child(2) {
+                transform: translate(-1px, -1px) rotate(-70deg);
+            }
+        }
+    }
+
+    .avartar_box {
+        width: 24px;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 2px solid #ffffff;
+    }
+
+    .text_box {
+        padding-inline-start: 8px;
+
+        p:nth-child(1) {
+            font-weight: $w500;
+            color: $white;
+            font-size: 11px;
+            margin-block-end: 2px;
+        }
+
+        p:nth-child(2) {
+            font-size: 8px;
+            color: $sub-heading;
+            width: fit-content;
+        }
+    }
+
+    .back_section {
+        display: flex;
+        align-items: center;
+
+        .kebab_box {
+            display: grid;
+            gap: 1px;
+            
+            div {
+                width: 2px;
+                height: 2px;
+                border-radius: 50%;
+                background-color: white;
+            }
+        }
+    }
+}
+
+.chat_box {
+    width: 100%;
+    padding: 11px 7.5px;
+    margin-block-end: 2px;
+
+    p {
+        font-size: 8px;
+    }
+
+    .message-1,
+    .message-2 {
+        padding: 6px 8px;
+
+        p {
+            line-height: 11px;
+        }
+    }
+
+    .top-message_box {
+        width: fit-content;
+        display: grid;
+        gap: 8px;
+        margin-block-end: 16px;
+
+        .message-1,
+        .message-2 {
+            width: 128px;
+            background-color: $message-background;
+            border-radius: 10px 10px 10px 4px;
+
+            p {
+                color: $chat-left;
+            }
+        }
+    }
+
+    .middle-message_box {
+        width: fit-content;
+        margin-left: auto;
+        display: grid;
+        gap: 8px;
+        margin-block-end: 16px;
+
+        .dog-image_box {
+            display: flex;
+            gap: 8px;
+
+            img {
+                width: 40px;
+                border-radius: 10px;
+            }
+        }
+
+        .message-1,
+        .message-2 {
+            margin-left: auto;
+            width: 128px;
+            background-color: $white;
+            border-radius: 10px 10px 4px 10px;
+            box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+
+            p {
+                color: $chat-right;
+            }
+        }
+
+        .message-2 {
+            width: fit-content;
+        }
+    }
+
+    .bottom-message_box {
+        width: fit-content;
+        display: grid;
+        gap: 8px;
+        
+        .message-1 {
+            width: 128px;
+            background-color: $message-background;
+            border-radius: 10px 10px 10px 4px;
+
+            p {
+                color: $chat-left;
+            }
+        }
+
+        .price-1_box,
+        .price-2_box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 10px 10px 10px 4px;
+            width: 160px;
+            padding: 10px 8px;
+            padding-inline-end: 16px;
+            background-image:
+            linear-gradient(to bottom right, $Light-Magenta-gradient, $Light-Violet-gradient);
+
+            .front-section {
+                display: flex;
+                align-items: center;
+
+                .radio-button {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    border: 2px solid $radio-button-outline;
+                    margin-inline-end: 8px;
+                }
+
+                .text {
+                    color: $white;
+                }
+            }
+
+            .price {
+                font-size: 12px;
+                font-weight: $w700;
+                color: $white;
+            }
+        }
+    }
+}
+
+.type_box {
+    background-color: $white;
+    width: 213px;
+    height: 34px;
+    padding-inline-start: 20px;
+    padding-inline-end: 5px;
+    border-radius: 17px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .placeholder {
+        font-size: 9px;
+        color: $placeholder;
+    }
+
+    .send_box {
+        width: 24px;
+        height: 24px;
+        background-color: $submit-button;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .right-arrow_container {
+            transform: translateX(100%) rotate(35deg);
+            
+            div {
+                width: 2.5px;
+                height: 7px;
+                border-radius: 2px;
+                background-color: $white;
+                transform-origin: center bottom;
+            }
+
+            div:nth-child(1) {
+                transform: translate(1px, 1px) rotate(-70deg);
+            }
+        }
+    }
+}

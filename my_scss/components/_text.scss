@@ -1,0 +1,25 @@
+@use '../utils/variables' as *;
+@use '../utils/functions' as *;
+
+.main-text_box {
+    h1,
+    p {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    h1 {
+        width: fit-content;
+        font-size: rem(40);
+        color: $main-heading;
+        font-weight: $w500;
+        margin-block-end: rem(24);
+    }
+
+    p {
+        width: 90%;
+        line-height: rem(28);
+        font-size: 1rem;
+        color: $paragraph
+    }
+}
